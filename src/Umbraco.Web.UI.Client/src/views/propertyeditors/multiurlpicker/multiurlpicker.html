@@ -39,9 +39,7 @@
 
             <!-- Equal min and max -->
             <span ng-if="model.config.minNumber && model.config.maxNumber && model.config.minNumber === model.config.maxNumber">
-                <span ng-if="renderModel.length < model.config.maxNumber">
-                    <localize key="general_Add">Add</localize> {{model.config.minNumber - renderModel.length}} <localize key="validation_items">item(s)</localize>
-                </span>
+                <span ng-if="renderModel.length < model.config.maxNumber">Add {{model.config.minNumber - renderModel.length}} item(s)</span>
                 <span ng-if="renderModel.length > model.config.maxNumber">
                     <localize key="validation_maxCount">You can only have</localize> {{model.config.maxNumber}} <localize key="validation_urlsSelected"> url(s) selected</localize>
                 </span>
